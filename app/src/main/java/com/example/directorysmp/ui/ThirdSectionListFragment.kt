@@ -1,4 +1,4 @@
-package com.example.directorysmp
+package com.example.directorysmp.ui
 
 import androidx.fragment.app.Fragment
 
