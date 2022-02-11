@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.directorysmp.databinding.FragmentFirstSectionListBinding
 import com.example.directorysmp.ui.adapters.FirstSectionAdapter
@@ -25,6 +26,7 @@ class FirstSectionListFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         recyclerView = binding.recyclerView
+        recyclerView.layoutManager = LinearLayoutManager(this.requireContext())
         recyclerView.adapter = FirstSectionAdapter()
     }
 
