@@ -6,16 +6,12 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.directorysmp.R
+import com.example.directorysmp.data.DataSource
 
 class FirstSectionAdapter() :
     RecyclerView.Adapter<FirstSectionAdapter.FirstSectionViewHolder>() {
 
-    private val chapters: List<String> = listOf(
-        "АНЕСТЕЗИОЛОГИЯ и РЕАНИМАТОЛОГИЯ",
-        "Токсикология",
-        "Токсикология (детская)",
-        "Кардиология"
-    )
+    private val chapters = DataSource.directoryItems
 
     class FirstSectionViewHolder(val view: View) : RecyclerView.ViewHolder(view) {
         val textView = view.findViewById<TextView>(R.id.text_view_item)
@@ -38,7 +34,7 @@ class FirstSectionAdapter() :
     ) {
         val item = chapters[position]
 
-        holder.textView.text = item
+        holder.textView.text = item.chapter
     }
 
     override fun getItemCount(): Int {
