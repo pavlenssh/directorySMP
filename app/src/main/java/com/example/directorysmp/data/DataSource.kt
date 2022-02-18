@@ -1,8 +1,8 @@
 package com.example.directorysmp.data
 
-import com.example.directorysmp.model.DiagnosisWithAmountOfMedialCare
 import com.example.directorysmp.model.DiagnosisWithTacticsAndAmountOfMedicalCare
 import com.example.directorysmp.model.DirectoryItem
+import com.example.directorysmp.model.UnderDiagnosisWithAmountOfMedialCare
 
 object DataSource {
     val directoryItems = listOf(
@@ -10,8 +10,11 @@ object DataSource {
             chapter = "АНЕСТЕЗИОЛОГИЯ и РЕАНИМАТОЛОГИЯ",
             diagnosisWithTacticsAndAmountOfMedicalCare = listOf(
                 DiagnosisWithTacticsAndAmountOfMedicalCare(
+                    "Остановка сердца: внезапная потеря" +
+                            "сознания, отсутствие пульса на" +
+                            "сонной артерии, отсутствие дыхания",
                     listOf(
-                        DiagnosisWithAmountOfMedialCare(
+                        UnderDiagnosisWithAmountOfMedialCare(
                             "Остановка сердца: внезапная потеря" +
                                     "сознания, отсутствие пульса на" +
                                     "сонной артерии, отсутствие дыхания",
@@ -20,7 +23,7 @@ object DataSource {
                                     "электродов дефибриллятора;\n" +
                                     "- ЭКГ – мониторинг."
                         ),
-                        DiagnosisWithAmountOfMedialCare(
+                        UnderDiagnosisWithAmountOfMedialCare(
                             "- при мелковолновой фибрилляции\n" +
                                     "желудочков (амплитуда волны менее\n" +
                                     "0,25 мВ); асистолии;\n" +
@@ -50,7 +53,7 @@ object DataSource {
                                     "- При асистолии: СЛР можно прекратить, если использование\n" +
                                     "всех доступных методов не эффективно в течение 30 мин."
                         ),
-                        DiagnosisWithAmountOfMedialCare(
+                        UnderDiagnosisWithAmountOfMedialCare(
                             "- при крупноволновой фибрилляции\n" +
                                     "желудочков (амплитуда волны 0,25\n" +
                                     "мВ и более); желудочковой\n" +
@@ -62,7 +65,7 @@ object DataSource {
                                     "сердца;\n" +
                                     "- Анализ ритма сердца (не более 5 сек.)."
                         ),
-                        DiagnosisWithAmountOfMedialCare(
+                        UnderDiagnosisWithAmountOfMedialCare(
                             "- при сохраняющейся крупноволновой\n" +
                                     "фибрилляции желудочков или\n" +
                                     "желудочковой тахикардии без пульса",
@@ -90,20 +93,20 @@ object DataSource {
                                     "мг/кг);\n" +
                                     "- При асистолии - действовать по протоколу «Асистолия»."
                         ),
-                        DiagnosisWithAmountOfMedialCare(
+                        UnderDiagnosisWithAmountOfMedialCare(
                             "- при отравлении трициклическими\n" +
                                     "антидепрессантами или кислотами",
                             "- Дополнительно:\n" +
                                     "- натрия гидрокарбонат, 5% - 200 мл в/в (60 кап./мин.)."
                         ),
-                        DiagnosisWithAmountOfMedialCare(
+                        UnderDiagnosisWithAmountOfMedialCare(
                             "- при гипомагниемии (пируэтная\n" +
                                     "желудочковая тахикардия, длительная\n" +
                                     "фибрилляция желудочков)",
                             "- Дополнительно:\n" +
                                     "- магния сульфат, 2000-2500 мг (дети: 20-40 мг/кг) в/в медленно."
                         ),
-                        DiagnosisWithAmountOfMedialCare(
+                        UnderDiagnosisWithAmountOfMedialCare(
                             "- при гиперкалиемии (ХПН в\n" +
                                     "анамнезе, отравление\n" +
                                     "нефротоксичными ядами, обширные\n" +
@@ -112,27 +115,27 @@ object DataSource {
                                     "- кальция глюконат, 1000 мг в/в;\n" +
                                     "- натрия гидрокарбонат, 5% - 200 мл в/в (60 кап./мин.)."
                         ),
-                        DiagnosisWithAmountOfMedialCare(
+                        UnderDiagnosisWithAmountOfMedialCare(
                             "- при отравлении антагонистами\n" +
                                     "кальция",
                             "- Дополнительно:\n" +
                                     "- кальция глюконат, 1000 мг в/в."
                         ),
-                        DiagnosisWithAmountOfMedialCare(
+                        UnderDiagnosisWithAmountOfMedialCare(
                             "- при гиповолемии (эксикоз,\n" +
                                     "кровотечение)",
                             "- Дополнительно:\n" +
                                     "- выполнить протокол массивной инфузии растворов при\n" +
                                     "гиповолемическом шоке."
                         ),
-                        DiagnosisWithAmountOfMedialCare(
+                        UnderDiagnosisWithAmountOfMedialCare(
                             "- при напряженном\n" +
                                     "пневмотораксе",
                             "- Дополнительно:\n" +
                                     "- незамедлительная пункция плевральной полости во 2-м\n" +
                                     "межреберье по средне-ключичной линии."
                         ),
-                        DiagnosisWithAmountOfMedialCare(
+                        UnderDiagnosisWithAmountOfMedialCare(
                             "- при общем охлаждении\n" +
                                     "организма (гипотермии)",
                             "- Дополнительно:\n" +
@@ -148,18 +151,18 @@ object DataSource {
                                     "ритма, дыхания, температуры тела. Все пациенты с признаками\n" +
                                     "общего охлаждения подлежат госпитализации в стационар!"
                         ),
-                        DiagnosisWithAmountOfMedialCare(
+                        UnderDiagnosisWithAmountOfMedialCare(
                             "- при проведении СЛР у беременных в\n" +
                                     "третьем триместре",
                             ""
                         ),
-                        DiagnosisWithAmountOfMedialCare(
+                        UnderDiagnosisWithAmountOfMedialCare(
                             "- Дополнительно:\n" +
                                     "- помещение валика под правое бедро или ручное смещение\n" +
                                     "матки влево (с 20 недель беременности).",
                             ""
                         ),
-                        DiagnosisWithAmountOfMedialCare(
+                        UnderDiagnosisWithAmountOfMedialCare(
                             "- успешная CЛР (ранний\n" +
                                     "постреанимационный период)",
                             "- ЭКГ-мониторирование в 12 отведениях, АД, ЧСС, SрО2;\n" +
@@ -169,7 +172,7 @@ object DataSource {
                                     "в/в (90 кап./мин.);\n" +
                                     "- криотерапия местно (область сонных артерий, затылок)."
                         ),
-                        DiagnosisWithAmountOfMedialCare(
+                        UnderDiagnosisWithAmountOfMedialCare(
                             "- при САД < 90 мм рт. ст.",
                             "- Норэпинефрин (норадреналин) 16 мг в разведении натрия\n" +
                                     "хлорида 0,9% - 250 мл в/в капельно, со скоростью 0,03-3\n" +
@@ -184,8 +187,10 @@ object DataSource {
                             "врачебной бригады."
                 ),
                 DiagnosisWithTacticsAndAmountOfMedicalCare(
+                    "Аллергический отек верхних\n" +
+                            "дыхательных путей",
                     listOf(
-                        DiagnosisWithAmountOfMedialCare(
+                        UnderDiagnosisWithAmountOfMedialCare(
                             "Аллергический отек верхних\n" +
                                     "дыхательных путей",
                             "- Прекращение контакта с аллергеном;\n" +
@@ -258,8 +263,9 @@ object DataSource {
                             "поликлинику."
                 ),
                 DiagnosisWithTacticsAndAmountOfMedicalCare(
+                    "Анафилактический шок",
                     listOf(
-                        DiagnosisWithAmountOfMedialCare(
+                        UnderDiagnosisWithAmountOfMedialCare(
                             "Анафилактический шок",
                             "- Прекращение контакта с аллергеном;\n" +
                                     "- придать положение Тренделенбурга (с приподнятым ножным\n" +
@@ -287,7 +293,7 @@ object DataSource {
                                     "- инъекция – жгут выше места инъекции, холод локально,\n" +
                                     "- укус насекомого – удалить жало, холод локально."
                         ),
-                        DiagnosisWithAmountOfMedialCare(
+                        UnderDiagnosisWithAmountOfMedialCare(
                             "- при сохранении САД < 80 мм рт.ст.",
                             "- Эпинефрин (адреналин) 0,5 мг в разведении натрия хлорида\n" +
                                     "0,9% - 250 мл в/в со скоростью 10 - 20 кап./мин.\n" +
@@ -295,7 +301,7 @@ object DataSource {
                                     "САД ˂ 80 мм рт.ст.:\n" +
                                     "- инфузия натрия хлорида 0,9% - 500 мл в/в капельно."
                         ),
-                        DiagnosisWithAmountOfMedialCare(
+                        UnderDiagnosisWithAmountOfMedialCare(
                             "- при САД > 90 мм рт.ст.",
                             "- Хлоропирамин (супрастин) 20 - 40 мг в/в (противопоказан при\n" +
                                     "глаукоме, язвенной болезни желудка в фазе обострения,\n" +
@@ -303,13 +309,13 @@ object DataSource {
                                     "или\n" +
                                     "- дифенгидрамин (димедрол) 10 мг в/в."
                         ),
-                        DiagnosisWithAmountOfMedialCare(
+                        UnderDiagnosisWithAmountOfMedialCare(
                             "- при бронхоспазме",
                             "- Сальбутамол 2 дозы,\n" +
                                     "- аминофиллин 240 мг в/в,\n" +
                                     "- инсуффляция увлажненного кислорода 1-4 л/мин."
                         ),
-                        DiagnosisWithAmountOfMedialCare(
+                        UnderDiagnosisWithAmountOfMedialCare(
                             "- при нарушении\n" +
                                     "дыхания (ДН III - IV ст.)",
                             "- Для бригад АиР: перед интубацией:\n" +
@@ -351,12 +357,13 @@ object DataSource {
                             "поликлинику."
                 ),
                 DiagnosisWithTacticsAndAmountOfMedicalCare(
+                    "",
                     listOf(
-                        DiagnosisWithAmountOfMedialCare(
+                        UnderDiagnosisWithAmountOfMedialCare(
                             "",
                             ""
                         ),
-                        DiagnosisWithAmountOfMedialCare(
+                        UnderDiagnosisWithAmountOfMedialCare(
                             "",
                             ""
                         )

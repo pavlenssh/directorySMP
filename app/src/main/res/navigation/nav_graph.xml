@@ -22,6 +22,9 @@
         <action
             android:id="@+id/action_secondSectionListFragment_to_thirdSectionListFragment"
             app:destination="@id/thirdSectionListFragment" />
+        <argument
+            android:name="chapter"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/thirdSectionListFragment"

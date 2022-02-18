@@ -4,9 +4,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.directorysmp.R
 import com.example.directorysmp.data.DataSource
+import com.example.directorysmp.ui.FirstSectionListFragmentDirections
 
 class FirstSectionAdapter() :
     RecyclerView.Adapter<FirstSectionAdapter.FirstSectionViewHolder>() {
@@ -35,6 +37,11 @@ class FirstSectionAdapter() :
         val item = chapters[position]
 
         holder.textView.text = item.chapter
+        holder.textView.setOnClickListener {
+            val action =
+                FirstSectionListFragmentDirections.actionFirstSectionListFragmentToSecondSectionListFragment(chapter = holder.textView.text.toString())
+            holder.view.findNavController().navigate(action)
+        }
     }
 
     override fun getItemCount(): Int {

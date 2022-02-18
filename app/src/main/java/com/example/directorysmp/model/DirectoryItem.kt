@@ -6,11 +6,12 @@ data class DirectoryItem(
 )
 
 data class DiagnosisWithTacticsAndAmountOfMedicalCare(
-    val diagnosisWithAmountOfMedialCare: List<DiagnosisWithAmountOfMedialCare>,
+    val diagnosis: String,
+    val underDiagnosisWithAmountOfMedialCare: List<UnderDiagnosisWithAmountOfMedialCare>,
     val tactics: String
 )
 
-data class DiagnosisWithAmountOfMedialCare(
-    val diagnosis: String,
+data class UnderDiagnosisWithAmountOfMedialCare(
+    val underDiagnosis: String,
     val amountOfMedicalCare: String
 )
