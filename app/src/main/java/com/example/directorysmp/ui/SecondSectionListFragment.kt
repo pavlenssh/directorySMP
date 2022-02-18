@@ -15,7 +15,6 @@ class SecondSectionListFragment : Fragment() {
     private var _binding: FragmentSecondSectionListBinding? = null
     private val binding get() = _binding!!
     private lateinit var recyclerView: RecyclerView
-    private lateinit var textView: TextView
     private lateinit var chapter: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
