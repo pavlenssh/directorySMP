@@ -38,43 +38,33 @@
 
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="1dp">
+                android:layout_height="wrap_content">
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:background="@drawable/background_table_item"
                     android:layout_margin="5dp">
 
                     <TextView
-                        android:layout_width="0dp"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
                         android:layout_margin="10dp"
-                        android:text="Остановка сердца: внезапная потеря
-сознания, отсутствие пульса на
-сонной артерии, отсутствие дыхания"
+                        android:text="Остановка сердца"
                         android:textAlignment="textStart" />
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:background="@drawable/background_table_item"
                     android:layout_margin="5dp">
 
                     <TextView
-                        android:layout_width="0dp"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
                         android:layout_margin="10dp"
-                        android:text="- Компрессии грудной клетки в комбинации с ИВЛ;
-- Анализ электрической деятельности сердца с помощью
-электродов дефибриллятора;
-- ЭКГ – мониторинг."
+                        android:text="- Компрессии грудной клетки "
                         android:layout_marginBottom="20dp"
                         android:textAlignment="textStart" />
                 </LinearLayout>
@@ -85,51 +75,29 @@
                 android:layout_height="wrap_content">
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:background="@drawable/background_table_item"
                     android:layout_margin="5dp">
 
                     <TextView
-                        android:layout_width="0dp"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
                         android:layout_margin="10dp"
-                        android:text="- при мелковолновой фибрилляции
-желудочков (амплитуда волны менее
-0,25 мВ); асистолии;
-электромеханической диссоциации;
-при отсутствии данных об
-электрической деятельности сердца" />
+                        android:text="- при мелковолновой фибрилляции" />
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:background="@drawable/background_table_item"
                     android:layout_margin="5dp">
 
                     <TextView
-                        android:layout_width="0dp"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
                         android:layout_margin="10dp"
-                        android:text="- Дефибрилляция противопоказана.
-- Проведение сердечно-легочной реанимации (далее СЛР):
-- Компрессии грудной клетки (далее – КГК) (частота от100
-до120 в мин.; глубина компрессии у взрослых - 5-6 см; паузы -
-не более 10 сек.);
-- Обеспечение проходимости верхних дыхательных путей
-(далее -ВДП): прием Сафара, воздуховод, санация ВДП;
-- Искусственная вентиляция легких (далее - ИВЛ): основной
-метод - лицевая маска и АMБУ с использованием воздуховода с
-подключением 100% О2. Продолжительность вдоха – 1 сек.
-Соотношение КГК со вдохами - 30:2, перерыв на вдох - не более
-5 сек.
-- Обеспечение венозного доступа (катетеризация
-периферической вены) или внутрикостного доступа;"
+                        android:text="- Дефибрилляция противопоказана"
                         android:textAlignment="textStart" />
                 </LinearLayout>
             </TableRow>
