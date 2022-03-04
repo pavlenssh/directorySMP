@@ -13,6 +13,7 @@ import android.widget.TextView
 import androidx.core.view.setMargins
 import androidx.fragment.app.Fragment
 import com.example.directorysmp.R
+import com.example.directorysmp.data.DataSource
 import com.example.directorysmp.databinding.FragmentThirdSectionListBinding
 
 
@@ -20,6 +21,17 @@ class ThirdSectionListFragment : Fragment() {
     private var _binding: FragmentThirdSectionListBinding? = null
     private val binding get() = _binding!!
     private lateinit var tableView: TableLayout
+    private lateinit var chapter: String
+    private lateinit var diagnosis: String
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        arguments?.let {
+            chapter = it.getString(CHAPTER_KEY).toString()
+            diagnosis = it.getString(DIAGNOSIS_KEY).toString()
+        }
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -33,6 +45,21 @@ class ThirdSectionListFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         tableView = binding.tableView
+
+        loadTableLayout()
+
+
+
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
+
+    private fun loadTableLayout() {
+        val diagnosisWithTacticsAndAmountOfMedicalCare = DataSource.directoryItems.first {it.chapter == chapter}.diagnosisWithTacticsAndAmountOfMedicalCare
+        val diagnosisWithAmountOfMedialCare = diagnosisWithTacticsAndAmountOfMedicalCare.first {it.diagnosis == diagnosis}.underDiagnosisWithAmountOfMedialCare
 
         val tableRow = TableRow(this.context)
         tableRow.layoutParams = ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT)
@@ -49,7 +76,7 @@ class ThirdSectionListFragment : Fragment() {
         firstTextView.apply {
             layoutParams = LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT)
             (layoutParams as LinearLayout.LayoutParams).setMargins(24,24,24,24)
-            text = "Dynamically added diagnosis"
+            text = diagnosisWithAmountOfMedialCare[0].underDiagnosis
         }
         firstLinearLayout.addView(firstTextView)
 
@@ -65,7 +92,7 @@ class ThirdSectionListFragment : Fragment() {
         secondTextView.apply {
             layoutParams = LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT)
             (layoutParams as LinearLayout.LayoutParams).setMargins(24,24,24,24)
-            text = "PPSPSPSPSPSPSP"
+            text = diagnosisWithAmountOfMedialCare[0].amountOfMedicalCare
         }
         secondLinearLayout.addView(secondTextView)
 
@@ -75,8 +102,8 @@ class ThirdSectionListFragment : Fragment() {
         tableView.addView(tableRow)
     }
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
+    companion object {
+        const val CHAPTER_KEY = "chapter"
+        const val DIAGNOSIS_KEY = "diagnosis"
     }
 }

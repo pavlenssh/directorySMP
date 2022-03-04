@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.directorysmp.R
 import com.example.directorysmp.data.DataSource
 import com.example.directorysmp.ui.SecondSectionListFragmentDirections
+import com.example.directorysmp.ui.ThirdSectionListFragment
 
 class SecondSectionAdapter(private val chapter: String, context: Context) :
     RecyclerView.Adapter<SecondSectionAdapter.SecondSectionViewHolder>() {
@@ -33,8 +34,8 @@ class SecondSectionAdapter(private val chapter: String, context: Context) :
 
         holder.textView.text = item.diagnosis
         holder.textView.setOnClickListener {
-            val action =
-                SecondSectionListFragmentDirections.actionSecondSectionListFragmentToThirdSectionListFragment()
+            val action = SecondSectionListFragmentDirections
+                .actionSecondSectionListFragmentToThirdSectionListFragment(chapter = chapter, diagnosis = item.diagnosis)
             holder.view.findNavController().navigate(action)
         }
     }

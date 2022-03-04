@@ -30,5 +30,12 @@
         android:id="@+id/thirdSectionListFragment"
         android:name="com.example.directorysmp.ui.ThirdSectionListFragment"
         android:label="fragment_third_section_list"
-        tools:layout="@layout/fragment_third_section_list" />
+        tools:layout="@layout/fragment_third_section_list" >
+        <argument
+            android:name="chapter"
+            app:argType="string" />
+        <argument
+            android:name="diagnosis"
+            app:argType="string" />
+    </fragment>
 </navigation>
