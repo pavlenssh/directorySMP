@@ -1,108 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_height="match_parent"
+    tools:context=".ui.SecondSectionListFragment">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#bbbbbb"
-        android:paddingStart="16dp"
-        android:paddingEnd="16dp"
-        tools:context=".MainActivity">
-
-
-        <TableLayout
-            android:id="@+id/tableView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:stretchColumns="*">
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:gravity="center">
-
-                <TextView
-                    android:id="@+id/title"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:text="АНЕСТЕЗИОЛОГИЯ и РЕАНИМАТОЛОГИЯ"
-                    android:textAlignment="center"
-                    android:background="@drawable/background_table_title" />
-            </LinearLayout>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <LinearLayout
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="@drawable/background_table_item"
-                    android:layout_margin="5dp">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
-                        android:text="Остановка сердца"
-                        android:textAlignment="textStart" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="@drawable/background_table_item"
-                    android:layout_margin="5dp">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
-                        android:text="- Компрессии грудной клетки "
-                        android:layout_marginBottom="20dp"
-                        android:textAlignment="textStart" />
-                </LinearLayout>
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <LinearLayout
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="@drawable/background_table_item"
-                    android:layout_margin="5dp">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
-                        android:text="- при мелковолновой фибрилляции" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="@drawable/background_table_item"
-                    android:layout_margin="5dp">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
-                        android:text="- Дефибрилляция противопоказана"
-                        android:textAlignment="textStart" />
-                </LinearLayout>
-            </TableRow>
-        </TableLayout>
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-</ScrollView>
+        android:layout_height="match_parent"
+        android:clipToPadding="false" />
+</FrameLayout>

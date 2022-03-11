@@ -11,7 +11,7 @@ data class DiagnosisWithTacticsAndAmountOfMedicalCare(
     val tactics: String
 )
 
-data class UnderDiagnosisWithAmountOfMedialCare(
+open class UnderDiagnosisWithAmountOfMedialCare(
     val underDiagnosis: String,
     val amountOfMedicalCare: String
 )
