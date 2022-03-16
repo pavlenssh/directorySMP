@@ -37,5 +37,22 @@
         <argument
             android:name="diagnosis"
             app:argType="string" />
+        <action
+            android:id="@+id/action_thirdSectionListFragment_to_detailDiagnosisDefinitionFragment"
+            app:destination="@id/detailDiagnosisDefinitionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailDiagnosisDefinitionFragment"
+        android:name="com.example.directorysmp.ui.DetailDiagnosisDefinitionFragment"
+        android:label="fragment_detail_diagnosis_definition"
+        tools:layout="@layout/fragment_detail_diagnosis_definition" >
+        <argument
+            android:name="diagnosis"
+            app:argType="string" />
+        <argument android:name="tactics"
+            app:argType="string" />
+        <argument
+            android:name="medicalCare"
+            app:argType="string" />
     </fragment>
 </navigation>

@@ -25,7 +25,7 @@ class FirstSectionAdapter() :
     ): FirstSectionViewHolder {
         val layout = LayoutInflater
             .from(parent.context)
-            .inflate(R.layout.item_view, parent, false)
+            .inflate(R.layout.first_section_item_view, parent, false)
 
         return FirstSectionViewHolder(layout)
     }
