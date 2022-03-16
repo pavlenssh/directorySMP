@@ -7,10 +7,11 @@ import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.RelativeLayout
 import android.widget.TextView
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.directorysmp.R
 import com.example.directorysmp.data.DataSource
-import com.example.directorysmp.model.UnderDiagnosisWithAmountOfMedialCare
+import com.example.directorysmp.ui.ThirdSectionListFragmentDirections
 
 class ThirdSectionAdapter(private val chapter: String, private val diagnosis: String, context: Context) :
     RecyclerView.Adapter<ThirdSectionAdapter.ThirdSectionViewHolder>() {
@@ -22,13 +23,13 @@ class ThirdSectionAdapter(private val chapter: String, private val diagnosis: St
         .first {it.chapter == chapter}.diagnosisWithTacticsAndAmountOfMedicalCare
         .first {it.diagnosis == diagnosis}.underDiagnosisWithAmountOfMedialCare
 
-    class underDiagnosises (val underDiagnosis: String, val amountOfMedialCare: String, var isExpanded: Boolean = false)
+    class UnderDiagnoses (val underDiagnosis: String, val amountOfMedialCare: String, var isExpanded: Boolean = false)
 
-    private val diagnosisList = mutableListOf<underDiagnosises>()
+    private val diagnosisList = mutableListOf<UnderDiagnoses>()
 
     init {
         for (element in underDiagnosis) {
-            diagnosisList.add(underDiagnosises(element.underDiagnosis, element.amountOfMedicalCare, false))
+            diagnosisList.add(UnderDiagnoses(element.underDiagnosis, element.amountOfMedicalCare, false))
         }
     }
 
@@ -57,6 +58,14 @@ class ThirdSectionAdapter(private val chapter: String, private val diagnosis: St
         holder.linearLayout.setOnClickListener {
             item.isExpanded = !item.isExpanded
             holder.expandableLayout.visibility = if (item.isExpanded) View.VISIBLE else View.GONE
+        }
+        holder.expandableLayout.setOnClickListener {
+            val action = ThirdSectionListFragmentDirections
+                .actionThirdSectionListFragmentToDetailDiagnosisDefinitionFragment(
+                    diagnosis = diagnosisList[position].underDiagnosis,
+                    medicalCare = diagnosisList[position].amountOfMedialCare,
+                    tactics = diagnosisWithTacticsAndAmountOfMedicalCare.first {it.diagnosis == diagnosis}.tactics)
+            holder.view.findNavController().navigate(action)
         }
 
     }
