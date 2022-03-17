@@ -12,7 +12,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.directorysmp.R
 import com.example.directorysmp.data.DataSource
 import com.example.directorysmp.model.DiagnosisWithTacticsAndAmountOfMedicalCare
-import com.example.directorysmp.ui.FirstSectionListFragmentDirections
 
 class FirstSectionAdapter() :
     RecyclerView.Adapter<FirstSectionAdapter.FirstSectionViewHolder>() {
@@ -32,7 +31,7 @@ class FirstSectionAdapter() :
     class FirstSectionViewHolder(val view: View) : RecyclerView.ViewHolder(view) {
         val textView: TextView = view.findViewById(R.id.text_view_item)
         val linearLayout: LinearLayout = view.findViewById(R.id.view_holder_linear_layout)
-        val relativeLayout: RelativeLayout = view.findViewById(R.id.relative_nested_recycler_view_layout)
+        val relativeChildLayout: RelativeLayout = view.findViewById(R.id.relative_nested_recycler_view_layout)
         val recyclerView: RecyclerView = view.findViewById(R.id.nested_recycler_view)
     }
 
@@ -53,7 +52,7 @@ class FirstSectionAdapter() :
     ) {
         val item = chapterWithDiagnosisList[position]
 
-        holder.relativeLayout.visibility = if (item.isExpanded) View.VISIBLE else View.GONE
+        holder.relativeChildLayout.visibility = if (item.isExpanded) View.VISIBLE else View.GONE
 
         holder.textView.text = item.chapter
         holder.recyclerView.layoutManager = LinearLayoutManager(holder.itemView.context)
@@ -61,7 +60,7 @@ class FirstSectionAdapter() :
 
         holder.linearLayout.setOnClickListener {
             item.isExpanded = !item.isExpanded
-            holder.relativeLayout.visibility = if (item.isExpanded) View.VISIBLE else View.GONE
+            holder.relativeChildLayout.visibility = if (item.isExpanded) View.VISIBLE else View.GONE
         }
     }
 
