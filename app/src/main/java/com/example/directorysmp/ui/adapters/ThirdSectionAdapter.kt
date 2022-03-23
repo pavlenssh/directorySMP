@@ -10,18 +10,14 @@ import android.widget.TextView
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.directorysmp.R
-import com.example.directorysmp.data.DataSource
+import com.example.directorysmp.model.UnderDiagnosisWithAmountOfMedialCare
 import com.example.directorysmp.ui.ThirdSectionListFragmentDirections
 
-class ThirdSectionAdapter(private val chapter: String, private val diagnosis: String, context: Context) :
+class ThirdSectionAdapter(
+    private var underDiagnosis: List<UnderDiagnosisWithAmountOfMedialCare>,
+    private val tactics: String,
+    context: Context) :
     RecyclerView.Adapter<ThirdSectionAdapter.ThirdSectionViewHolder>() {
-
-    private val diagnosisWithTacticsAndAmountOfMedicalCare = DataSource.directoryItems
-        .first {it.chapter == chapter}.diagnosisWithTacticsAndAmountOfMedicalCare
-
-    private val underDiagnosis = DataSource.directoryItems
-        .first {it.chapter == chapter}.diagnosisWithTacticsAndAmountOfMedicalCare
-        .first {it.diagnosis == diagnosis}.underDiagnosisWithAmountOfMedialCare
 
     class UnderDiagnoses (val underDiagnosis: String, val amountOfMedialCare: String, var isExpanded: Boolean = false)
 
@@ -52,7 +48,7 @@ class ThirdSectionAdapter(private val chapter: String, private val diagnosis: St
         val item = diagnosisList[position]
 
         holder.amountOfMedicalCareTextView.text = item.amountOfMedialCare
-        holder.tacticsTextView.text = diagnosisWithTacticsAndAmountOfMedicalCare.first {it.diagnosis == diagnosis}.tactics
+        holder.tacticsTextView.text = tactics
         holder.diagnosisNameTextView.text = diagnosisList[position].underDiagnosis
         holder.expandableLayout.visibility = if (item.isExpanded) View.VISIBLE else View.GONE
         holder.linearLayout.setOnClickListener {
@@ -64,7 +60,7 @@ class ThirdSectionAdapter(private val chapter: String, private val diagnosis: St
                 .actionThirdSectionListFragmentToDetailDiagnosisDefinitionFragment(
                     diagnosis = diagnosisList[position].underDiagnosis,
                     medicalCare = diagnosisList[position].amountOfMedialCare,
-                    tactics = diagnosisWithTacticsAndAmountOfMedicalCare.first {it.diagnosis == diagnosis}.tactics)
+                    tactics = tactics)
             holder.view.findNavController().navigate(action)
         }
 

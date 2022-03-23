@@ -5,6 +5,7 @@
       <map>
         <entry key="..\:/AndroidStudioProjects/directorySMP/app/src/main/res/drawable/background_table_item.xml" value="0.1388888888888889" />
         <entry key="..\:/AndroidStudioProjects/directorySMP/app/src/main/res/drawable/background_table_title.xml" value="0.1388888888888889" />
+        <entry key="..\:/AndroidStudioProjects/directorySMP/app/src/main/res/drawable/search_view_bg.xml" value="0.3828125" />
         <entry key="..\:/AndroidStudioProjects/directorySMP/app/src/main/res/layout-v26/fragment_detail_diagnosis_definition.xml" value="0.36666666666666664" />
         <entry key="..\:/AndroidStudioProjects/directorySMP/app/src/main/res/layout/activity_main.xml" value="0.12001811594202899" />
         <entry key="..\:/AndroidStudioProjects/directorySMP/app/src/main/res/layout/first_section_child_item_view.xml" value="0.36666666666666664" />
@@ -18,6 +19,8 @@
         <entry key="..\:/AndroidStudioProjects/directorySMP/app/src/main/res/layout/item_list.xml" value="0.12001811594202899" />
         <entry key="..\:/AndroidStudioProjects/directorySMP/app/src/main/res/layout/item_view.xml" value="0.25" />
         <entry key="..\:/AndroidStudioProjects/directorySMP/app/src/main/res/layout/third_section_item_view.xml" value="0.29010416666666666" />
+        <entry key="..\:/AndroidStudioProjects/directorySMP/app/src/main/res/menu/main_menu.xml" value="0.36666666666666664" />
+        <entry key="..\:/AndroidStudioProjects/directorySMP/app/src/main/res/menu/menu.xml" value="0.36666666666666664" />
       </map>
     </option>
   </component>
