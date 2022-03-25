@@ -10,6 +10,7 @@ import android.widget.TextView
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.directorysmp.R
+
 import com.example.directorysmp.model.UnderDiagnosisWithAmountOfMedialCare
 import com.example.directorysmp.ui.ThirdSectionListFragmentDirections
 
